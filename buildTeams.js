@@ -1,5 +1,5 @@
 function buildTeams() {
-    let players = ["Anastasia", "Alessio", "George", "Nicolas", "Davide", "Desire", "Manuel", "Alessia", "Mirco", "Karolina", "Lorenzo", "Pasto"];
+    let players = ["Anastasia", "Alessio", "George", "Nicolas", "Davide", "Desire", "Manuel", "Alessia", "Mirco", "Karolina", "Lorenzo", "Pietro"];
     let teamsNumber = new Array(12);
     let end = false;
     let x = 0, index = 0;
