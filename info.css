@@ -1,0 +1,32 @@
+body {
+    background-image: url("./man-looking-at-colorful-stars-wallpaper-5120x2880_55.jpg");
+    background-size: 100%;
+}
+
+.container {
+    position: relative;
+    background-color: black;
+    color: lime;
+    width: 400;
+    height: 350;
+    left: 50%;
+    top: 35%;
+    margin-left: -200;
+    margin-top: -200;
+    border-radius: 50px;
+}
+
+#titolo {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 100px;
+    margin-left: -50px;
+}
+
+#me {
+    position: absolute;
+    top: 30px;
+    margin-left: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
