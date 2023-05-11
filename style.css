@@ -6,9 +6,7 @@ body {
 
 .type-anim {
     width: 17ch;
-
     animation: typing 3s steps(17, jump-start), blink .5s step-end infinite alternate;
-
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -31,7 +29,7 @@ body {
 
 .centered {
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -43,4 +41,28 @@ body {
     width: 50px;
     height: 50px;
     margin-left: -25px;
+}
+
+.container {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+}
+
+#titolo {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 100px;
+    margin-left: -50px;
+}
+
+#me {
+    position: absolute;
+    width: 400px;
+    top: 30px;
+    margin-left: -200px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
 }
