@@ -1,6 +1,6 @@
 body {
     background-image: url("./man-looking-at-colorful-stars-wallpaper-5120x2880_55.jpg");
-    background-size: 100%;
+    background-size: cover;
 }
 
 .container {
