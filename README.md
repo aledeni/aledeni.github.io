@@ -1,1 +1,1 @@
-This simple web page briefly talks about me and I hope it is useful to briefly understand who I am and what I am passionate about.
+This simple web page briefly talks about me and I hope it's useful to briefly understand who I am and what I'm passionate about.
