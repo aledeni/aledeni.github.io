@@ -1,228 +1,165 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JCR Imola Pulcini 2015</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #222;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<title>Been</title>
 
-        header {
-            text-align: center;
-            background-color: #004d26;
-            color: white;
-            padding: 20px 10px;
-        }
+<style>
+    body {
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(120deg, #f0f4f8, #ffffff);
+        margin: 0;
+        padding: 40px;
+        color: #333;
+    }
 
-        header img {
-            width: 120px;
-        }
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-        h1 {
-            margin-top: 10px;
-            font-size: 26px;
-        }
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 40px;
+    }
 
-        section {
-            margin: 20px auto;
-            max-width: 900px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+        align-items: flex-start;
+    }
 
-        h2 {
-            border-bottom: 2px solid #004d26;
-            padding-bottom: 5px;
-            color: #004d26;
-        }
+    .map {
+        flex: 2;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        padding: 20px;
+    }
 
-        .match {
-            margin-bottom: 25px;
-            padding: 10px;
-            border-left: 4px solid #004d26;
-            background-color: #f9f9f9;
-        }
+    .map img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
 
-        .match-date {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+    .countries {
+        flex: 1;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        padding: 25px;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 8px;
-        }
+    .countries h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
 
-        th, td {
-            border: 1px solid #ddd;
-            text-align: center;
-            padding: 6px;
-        }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-        th {
-            background-color: #e6ffe6;
-        }
+    li {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 16px;
+    }
 
-        .scorers {
-            font-size: 14px;
-            margin-top: 5px;
-        }
+    li:last-child {
+        border-bottom: none;
+    }
 
-        footer {
-            text-align: center;
-            color: #777;
-            font-size: 14px;
-            margin: 20px 0;
+    .flag {
+        width: 28px;
+        height: 20px;
+        margin-right: 12px;
+        border-radius: 3px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.2);
+        object-fit: cover;
+    }
+
+    .stats {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        .container {
+            flex-direction: column;
         }
-    </style>
+    }
+
+    footer {
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+</style>
 </head>
+
 <body>
 
-<header>
-    <img src="JCR.png" alt="Logo JCR">
-    <h1>Pulcini 2015 - Girone A - Bologna - Stagione 25/26</h1>
-</header>
+<h1>My Travel Map 🌍</h1>
+<div class="subtitle">
+    <span id="visited">17</span> countries visited — 
+    <span id="percent"></span>% of the world
+</div>
 
-<main>
-    <!-- Giornata 1 -->
-    <section>
-        <h2>1ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">04/10/2025</div>
-            <div>Tozzona Pedagna - <strong>JCR Juvenilia C. Ravaglia</strong></div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>0-0</td><td>0-0</td><td>1-2</td><td>1-1</td><td>3-4</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Manuelli (2), Puppato</div>
-        </div>
-    </section>
+<script>
+    const visited = 17;
+    const total = 195;
+    const percentage = (visited * 100 / total).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById("percent").textContent = percentage;
+</script>
 
-    <!-- Giornata 2 -->
-    <section>
-        <h2>2ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">11/10/2025</div>
-            <div><strong>JCR Juvenilia C. Ravaglia</strong> - Medicina Fossatone S.S.D.</div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>1-0</td><td>0-2</td><td>0-2</td><td>1-3</td><td>1-3</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Manuelli, Mondello</div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Giornata 3 -->
-    <section>
-        <h2>3ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">18/10/2025</div>
-            <div>Osteria Grande A.S.D. - <strong>JCR Juvenilia C. Ravaglia</strong></div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>1-0</td><td>0-1</td><td>2-0</td><td>1-0</td><td>3-1</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Becca</div>
-        </div>
-    </section>
+    <!-- MAP -->
+    <div class="map">
+        <img src="https://douwe.com/projects/visited/world.png?selected=MA,JP,KH,VN,AT,CH,DE,ES,FR,GB,HR,HU,IT,LU,NL,SM,SI"
+             alt="World map with visited countries highlighted">
+    </div>
 
-    <!-- Giornata 4 -->
-    <section>
-        <h2>4ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">25/10/2025</div>
-            <div><strong>JCR Juvenilia C. Ravaglia</strong> - Chicco Ravaglia</div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>0-2</td><td>0-0</td><td>0-0</td><td>1-1</td><td>3-4</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Puppato</div>
-        </div>
-    </section>
+    <!-- COUNTRIES LIST -->
+    <div class="countries">
+        <ul>
+            <li><img class="flag" src="https://flagcdn.com/w40/at.png">Austria</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/kh.png">Cambodia</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/hr.png">Croatia</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/fr.png">France</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/de.png">Germany</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/hu.png">Hungary</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/it.png">Italy</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/jp.png">Japan</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/lu.png">Luxembourg</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/ma.png">Morocco</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/nl.png">Netherlands</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/sm.png">San Marino</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/si.png">Slovenia</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/es.png">Spain</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/ch.png">Switzerland</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/gb.png">United Kingdom</li>
+            <li><img class="flag" src="https://flagcdn.com/w40/vn.png">Vietnam</li>
+        </ul>
 
-    <!-- Giornata 5 -->
-    <section>
-        <h2>5ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">01/11/2025</div>
-            <div>Imolese Calcio 1919 - <strong>JCR Juvenilia C. Ravaglia</strong></div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>0-0</td><td>5-0</td><td>4-0</td><td>0-1</td><td>3-2</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Manuelli</div>
-        </div>
-    </section>
+        <div class="stats">17 / 195 countries</div>
+    </div>
 
-    <!-- Giornata 6 -->
-    <section>
-        <h2>6ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">08/11/2025</div>
-            <div><strong>JCR Juvenilia C. Ravaglia</strong> - Mezzolara</div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>1-0</td><td>0-0</td><td>0-2</td><td>0-1</td><td>2-3</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Manuelli</div>
-        </div>
-    </section>
+</div>
 
-    <!-- Giornata 7 -->
-    <section>
-        <h2>7ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">20/11/2025</div>
-            <div><strong>JCR Juvenilia C. Ravaglia</strong> - Libertas Castel S. Pietro</div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>1-1</td><td>1-1</td><td>0-2</td><td>0-1</td><td>2-4</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Manuelli, Autogol</div>
-        </div>
-    </section>
-
-    <!-- Giornata 8 -->
-    <section>
-        <h2>8ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">22/11/2025</div>
-            <div>Stella Azzurra Zolino - <strong>JCR Juvenilia C. Ravaglia</strong></div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>0-0</td><td>2-1</td><td>2-0</td><td>1-4</td><td>3-2</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Kamami, Manuelli (2), Mondello (2)</div>
-        </div>
-    </section>
-
-    <!-- Giornata 9 -->
-    <section>
-        <h2>9ª Giornata</h2>
-        <div class="match">
-            <div class="match-date">29/11/2025</div>
-            <div><strong>JCR Juvenilia C. Ravaglia</strong> - Sanpakids</div>
-            <table>
-                <tr><th>1° Tempo</th><th>2° Tempo</th><th>3° Tempo</th><th>4° Tempo</th><th>Totale</th></tr>
-                <tr><td>1-0</td><td>4-0</td><td>2-0</td><td>1-0</td><td>4-0</td></tr>
-            </table>
-            <div class="scorers"><strong>Marcatori:</strong> Autogol, Becca (4), Manuelli, Mondello, Sdruccioli</div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    © 2025 - Alessio De Nicola
-</footer>
+<footer>© 2026 - Alessio De Nicola</footer>
 
 </body>
 </html>
